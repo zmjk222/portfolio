@@ -551,110 +551,123 @@ body {
     transform: translateY(0);
 } 
 
-/* 移动端优化 - 进一步缩小尺寸 */
+/* 移动端优化 - 保持布局结构，只调整大小 */
 @media (max-width: 768px) {
     /* 基础设置 */
     body {
-        font-size: 10px;  /* 进一步缩小基础字体 */
+        font-size: 12px;
     }
 
-    .container {
-        padding: 0 5px;
-    }
-
-    /* 导航栏进一步缩小 */
+    /* 导航栏优化 */
     .nav-container {
-        padding: 5px;
+        padding: 8px 15px;
     }
 
     .nav-links {
-        gap: 0.5rem;
+        display: flex;
+        gap: 15px;
+        font-size: 12px;
     }
 
-    .nav-links a {
-        font-size: 0.8rem;
-    }
-
-    .logo {
-        font-size: 1rem;
-    }
-
-    /* 关于我部分进一步缩小 */
+    /* 关于我部分 */
     .about-content {
-        gap: 1rem;
+        display: flex;
+        flex-direction: row;  /* 保持横向布局 */
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .profile-image {
+        flex: 0 0 100px;  /* 固定宽度 */
     }
 
     .profile-image img {
-        width: 80px;  /* 更小的头像 */
-        height: 80px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-text {
+        text-align: left;  /* 保持左对齐 */
     }
 
     .profile-text h2 {
-        font-size: 1.2rem;
+        font-size: 16px;
+        margin-bottom: 10px;
     }
 
     .profile-text p {
-        font-size: 0.8rem;
+        font-size: 12px;
         line-height: 1.4;
     }
 
-    /* 作品展示部分缩小 */
+    /* 作品展示部分 */
     .section-title {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
+        font-size: 20px;
+        margin-bottom: 20px;
     }
 
     .portfolio-category h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.8rem;
+        font-size: 16px;
+        margin-bottom: 15px;
     }
 
-    /* 网格布局更紧凑 */
-    .portfolio-grid.four-columns,
+    /* 保持网格布局，调整大小 */
+    .portfolio-grid.four-columns {
+        grid-template-columns: repeat(4, 1fr);  /* 保持4列 */
+        gap: 8px;
+    }
+
     .portfolio-grid.three-columns {
-        gap: 0.4rem;
+        grid-template-columns: repeat(3, 1fr);  /* 保持3列 */
+        gap: 8px;
     }
 
     .portfolio-item {
-        padding: 0.4rem;
+        padding: 5px;
     }
 
     .portfolio-item h4 {
-        font-size: 0.7rem;
-        margin: 0.3rem 0;
+        font-size: 12px;
+        margin: 5px 0;
     }
 
-    /* 详情面板更紧凑 */
+    /* 详情面板 */
     .portfolio-detail {
-        width: 90%;
-        padding: 0.5rem;
+        position: fixed;
+        width: 100%;  /* 全屏显示 */
+        height: 100vh;
+        padding: 10px;
+        overflow-y: auto;
     }
 
     .detail-grid {
-        gap: 0.4rem;
+        grid-template-columns: repeat(3, 1fr);  /* 保持3列 */
+        gap: 8px;
     }
 
     .detail-panel h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.8rem;
+        font-size: 16px;
+        margin-bottom: 15px;
     }
 
     .detail-item h4 {
-        font-size: 0.7rem;
-        margin-top: 0.3rem;
+        font-size: 12px;
+        margin-top: 5px;
     }
 
-    /* 联系方式部分缩小 */
+    /* 联系方式部分 */
     .contact-section {
-        padding: 1rem 0;
+        padding: 20px 0;
     }
 
     .contact-content {
-        gap: 1rem;
+        display: flex;
+        flex-direction: row;  /* 保持横向布局 */
+        gap: 20px;
     }
 
     .contact-info {
-        font-size: 0.8rem;
+        font-size: 12px;
     }
 
     .qr-code img {
@@ -663,16 +676,7 @@ body {
     }
 
     .qr-code p {
-        font-size: 0.8rem;
-    }
-
-    /* 调整内边距和间距 */
-    section {
-        padding: 2rem 0;
-    }
-
-    .portfolio-category {
-        margin-bottom: 2rem;
+        font-size: 12px;
     }
 }
 
