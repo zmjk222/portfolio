@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GJP作品合集 - 苹果风格设计</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- 装饰背景 -->
+    <div class="decorative-bg"></div>
+
+    <!-- 导航栏 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">GJP作品合集</div>
+            <ul class="nav-links">
+                <li><a href="#about">关于我的</a></li>
+                <li><a href="#portfolio">作品展示</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 关于我的 -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content scroll-reveal">
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="郭建棚的个人照片">
+                </div>
+                <div class="profile-text">
+                    <h2>关于我</h2>
+                    <p class="intro">郭建棚 1992年生于广东广州</p>
+                    <div class="skills-list">
+                        <p class="skill-item">1. AI应用达人：精通Prompt Engineering技术，熟练运用主流AI模型，可针对特定场景开发智能化解决方案，显著提升工作效率。</p>
+                        <p class="skill-item">2. 新媒体运营（6年）：深度运营微信、小红书、抖音等主流内容平台，具备矩阵式运营能力，擅长数据分析与内容优化。</p>
+                        <p class="skill-item">3. 资深文案策划（8年）：专注品牌营销文案创作，涵盖品牌故事、产品文案、营销方案等，具备从策划到落地的全链路执行能力。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品展示区域 -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">作品展示</h2>
+            
+            <!-- AI应用展示 -->
+            <div class="portfolio-category scroll-reveal">
+                <h3>AI应用展示</h3>
+                <div class="portfolio-grid four-columns">
+                    <div class="portfolio-item" data-type="knowledge-tree">
+                        <i class="icon-decoration fas fa-star"></i>
+                        <h4>知识树展示</h4>
+                        <img src="images/photo1.jpg" alt="知识树">
+                    </div>
+                    <div class="portfolio-item" data-type="prompts">
+                        <h4>提示词案例</h4>
+                        <img src="images/photo2.jpg" alt="提示词案例">
+                    </div>
+                    <div class="portfolio-item" data-type="ai-agent">
+                        <h4>AI Agent展示</h4>
+                        <img src="images/photo3.jpg" alt="AI Agent">
+                    </div>
+                    <div class="portfolio-item" data-type="workflow">
+                        <h4>工作流程</h4>
+                        <img src="images/photo4.jpg" alt="工作流程">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新媒体运营展示 -->
+            <div class="portfolio-category">
+                <h3>新媒体运营展示</h3>
+                <div class="portfolio-grid three-columns">
+                    <div class="portfolio-item" data-type="wechat-articles">
+                        <h4>公众号文章</h4>
+                        <img src="images/photo6.jpg" alt="公众号文章">
+                    </div>
+                    <div class="portfolio-item" data-type="posters">
+                        <h4>图文海报</h4>
+                        <img src="images/photo6.jpg" alt="图文海报">
+                    </div>
+                    <div class="portfolio-item" data-type="videos">
+                        <h4>短视频</h4>
+                        <img src="images/photo7.jpg" alt="短视频">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 文案策划展示 -->
+            <div class="portfolio-category">
+                <h3>文案策划展示</h3>
+                <div class="portfolio-grid three-columns">
+                    <div class="portfolio-item" data-type="copywriting">
+                        <h4>文案文稿</h4>
+                        <img src="images/photo8.jpg" alt="文案文稿">
+                    </div>
+                    <div class="portfolio-item" data-type="campaign">
+                        <h4>活动策划案例</h4>
+                        <img src="images/photo9.jpg" alt="活动策划">
+                    </div>
+                    <div class="portfolio-item" data-type="materials">
+                        <h4>各类宣传物料</h4>
+                        <img src="images/photo10.jpg" alt="宣传物料">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 数据分析展示 -->
+            <div class="portfolio-category">
+                <h3>数据分析展示</h3>
+                <div class="portfolio-grid four-columns">
+                    <div class="portfolio-item" data-type="analysis-report">
+                        <h4>数据分析报告</h4>
+                        <img src="images/photo1.jpg" alt="数据分析">
+                    </div>
+                    <div class="portfolio-item" data-type="strategy">
+                        <h4>运营策略优化案例</h4>
+                        <img src="images/photo2.jpg" alt="运营策略">
+                    </div>
+                    <div class="portfolio-item" data-type="user-profile">
+                        <h4>用户画像分析案例</h4>
+                        <img src="images/photo3.jpg" alt="用户画像">
+                    </div>
+                    <div class="portfolio-item" data-type="roi">
+                        <h4>ROI提升数据</h4>
+                        <img src="images/photo4.jpg" alt="ROI数据">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 添加二级页面容器 -->
+            <div class="portfolio-detail">
+                <button class="close-detail">×</button>
+                
+                <div class="detail-content">
+                    <!-- AI应用展示的详情面板 -->
+                    <div class="detail-panel" data-for="knowledge-tree">
+                        <h3>知识树详细内容</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="知识树详情">
+                                <h4>知识树内容一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="知识树详情">
+                                <h4>知识树内容二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="知识树详情">
+                                <h4>知识树内容三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-panel" data-for="prompts">
+                        <h3>提示词案例详情</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="提示词案例">
+                                <h4>提示词案例一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="提示词案例">
+                                <h4>提示词案例二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="提示词案例">
+                                <h4>提示词案例三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-panel" data-for="ai-agent">
+                        <h3>AI Agent展示</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="AI Agent">
+                                <h4>AI Agent案例一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="AI Agent">
+                                <h4>AI Agent案例二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="AI Agent">
+                                <h4>AI Agent案例三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-panel" data-for="workflow">
+                        <h3>工作流程详情</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="工作流程">
+                                <h4>工作流程一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="工作流程">
+                                <h4>工作流程二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="工作流程">
+                                <h4>工作流程三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 新媒体运营展示的详情面板 -->
+                    <div class="detail-panel" data-for="wechat-articles">
+                        <h3>公众号文章合集</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="公众号文章">
+                                <h4>公众号文章一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="公众号文章">
+                                <h4>公众号文章二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="公众号文章">
+                                <h4>公众号文章三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-panel" data-for="posters">
+                        <h3>图文海报展示</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="海报">
+                                <h4>海报作品一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="海报">
+                                <h4>海报作品二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="海报">
+                                <h4>海报作品三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 文案策划展示的详情面板 -->
+                    <div class="detail-panel" data-for="copywriting">
+                        <h3>文案作品展示</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="文案作品">
+                                <h4>文案作品一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="文案作品">
+                                <h4>文案作品二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="文案作品">
+                                <h4>文案作品三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-panel" data-for="campaign">
+                        <h3>活动策划案例</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="活动策划">
+                                <h4>活动策划案例一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="活动策划">
+                                <h4>活动策划案例二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="活动策划">
+                                <h4>活动策划案例三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-panel" data-for="materials">
+                        <h3>宣传物料展示</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="宣传物料">
+                                <h4>宣传物料一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="宣传物料">
+                                <h4>宣传物料二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="宣传物料">
+                                <h4>宣传物料三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 数据分析展示的详情面板 -->
+                    <div class="detail-panel" data-for="analysis-report">
+                        <h3>数据分析报告</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="数据分析">
+                                <h4>数据分析报告一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="数据分析">
+                                <h4>数据分析报告二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="数据分析">
+                                <h4>数据分析报告三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 运营策略优化案例 -->
+                    <div class="detail-panel" data-for="strategy">
+                        <h3>运营策略优化案例</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="运营策略">
+                                <h4>运营策略案例一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="运营策略">
+                                <h4>运营策略案例二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="运营策略">
+                                <h4>运营策略案例三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 用户画像分析案例 -->
+                    <div class="detail-panel" data-for="user-profile">
+                        <h3>用户画像分析案例</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="用户画像">
+                                <h4>用户画像案例一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="用户画像">
+                                <h4>用户画像案例二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="用户画像">
+                                <h4>用户画像案例三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROI提升数据 -->
+                    <div class="detail-panel" data-for="roi">
+                        <h3>ROI提升数据</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="ROI数据">
+                                <h4>ROI数据分析一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="ROI数据">
+                                <h4>ROI数据分析二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="ROI数据">
+                                <h4>ROI数据分析三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 短视频详情面板 -->
+                    <div class="detail-panel" data-for="videos">
+                        <h3>短视频作品展示</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="短视频">
+                                <h4>短视频作品一</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="短视频">
+                                <h4>短视频作品二</h4>
+                            </div>
+                            <div class="detail-item">
+                                <img src="images/photo1.jpg" alt="短视频">
+                                <h4>短视频作品三</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 其他数据分析相关面板 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <footer id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">联系方式</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><strong>微信号：</strong> A49771553</p>
+                    <p><strong>手机号码：</strong> 13802412550</p>
+                </div>
+                <div class="qr-code">
+                    <img src="images/qrcode.jpg" alt="微信二维码">
+                    <p>扫描二维码添加微信</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
