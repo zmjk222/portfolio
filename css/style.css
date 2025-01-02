@@ -1,0 +1,661 @@
+/* 主要样式 */
+:root {
+    --primary-color: #333;
+    --secondary-color: #666;
+    --accent-color: #0071e3;
+    --background-color: #fff;
+    --gradient-1: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    --gradient-2: linear-gradient(to right, #434343 0%, black 100%);
+    --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* 导航栏样式 */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 首屏样式 */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--gradient-1);
+    position: relative;
+    overflow: hidden;
+    margin-top: -60px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,113,227,0.1), rgba(0,113,227,0));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+} 
+
+/* 导航栏链接样式 */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* 基础容器样式 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* 内容区域基础样式 */
+section {
+    padding: 5rem 0;
+}
+
+/* 修复内容被导航栏遮挡的问题 */
+body {
+    padding-top: 60px; /* 导航栏的高度 */
+} 
+
+/* 技能卡片样式 */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.skill-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.skill-card p {
+    color: var(--secondary-color);
+}
+
+/* 章节标题样式 */
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 4rem;
+} 
+
+/* 关于我的部分 */
+.about-section {
+    padding: 100px 0;
+    background-color: #f5f5f7;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    flex: 0 0 300px;
+}
+
+.profile-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.profile-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.profile-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* 作品展示部分 */
+.portfolio-category {
+    margin-bottom: 4rem;
+}
+
+.portfolio-category h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-auto-rows: auto;
+    align-items: start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.portfolio-item {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    cursor: pointer;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--hover-shadow);
+}
+
+.portfolio-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.portfolio-item img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+/* 添加展开按钮样式 */
+.expand-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+    padding: 40px 0 15px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--accent-color);
+    font-weight: 500;
+    display: none;  /* 默认隐藏 */
+}
+
+/* 当图片实际高度超过容器时显示展开按钮 */
+.portfolio-item.has-more .expand-btn {
+    display: block;
+}
+
+/* 展开状态的样式 */
+.portfolio-item.expanded img {
+    aspect-ratio: auto;
+    height: auto;
+}
+
+.portfolio-item.expanded .expand-btn {
+    display: none;
+}
+
+/* 联系方式部分 */
+.contact-section {
+    background-color: #f5f5f7;
+    padding: 80px 0;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+.qr-code {
+    text-align: center;
+}
+
+.qr-code img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .profile-image {
+        flex: 0 0 200px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+} 
+
+/* 技能列表样式 */
+.skills-list {
+    margin-top: 2rem;
+}
+
+.skill-item {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* 作品展示网格布局 */
+.portfolio-grid.four-columns {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.portfolio-grid.three-columns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .portfolio-grid.four-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .portfolio-grid.three-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid.four-columns,
+    .portfolio-grid.three-columns {
+        grid-template-columns: 1fr;
+    }
+} 
+
+/* 添加二级页面样式 */
+.portfolio-detail {
+    position: fixed;
+    top: 0;
+    right: -100%;  /* 初始隐藏在右侧 */
+    width: 60%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: saturate(180%) blur(20px);
+    padding: 2rem;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.portfolio-detail.active {
+    right: 0;
+}
+
+/* 关闭按钮 */
+.close-detail {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* 详情面板 */
+.detail-panel {
+    display: none;
+    padding: 2rem 0;
+}
+
+.detail-panel.active {
+    display: block;
+}
+
+/* 知识树网格布局 */
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 固定三列布局 */
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.4s ease;
+}
+
+.detail-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.detail-item img {
+    width: 100%;
+    aspect-ratio: 3/4;  /* 保持3:4的图片比例 */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.detail-item h4 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* 移除旧的文章卡片样式 */
+.articles-grid,
+.posters-grid,
+.videos-grid,
+.copywriting-grid,
+.campaign-grid,
+.materials-grid,
+.report-content,
+.strategy-content,
+.profile-content,
+.roi-content {
+    display: none;
+}
+
+/* 遮罩层 */
+.portfolio-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.portfolio-overlay.active {
+    opacity: 1;
+    visibility: visible;
+} 
+
+/* 详情面板中的图片样式 */
+.detail-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.detail-item img:hover {
+    transform: scale(1.05);
+}
+
+/* 面板标题样式 */
+.detail-panel h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+} 
+
+/* 添加动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portfolio-item {
+    animation: fadeInUp 0.6s ease backwards;
+    animation-delay: calc(var(--item-index) * 0.1s);
+}
+
+/* 添加滚动触发动画 */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+} 
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    /* 导航栏优化 */
+    .nav-container {
+        padding: 0.8rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+
+    /* 作品展示优化 */
+    .portfolio-detail {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* 标题样式优化 */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .portfolio-category h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* 添加视觉元素 */
+/* 装饰背景 */
+.decorative-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0,113,227,0.05) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(0,113,227,0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* 卡片悬浮效果增强 */
+.portfolio-item {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px) rotateX(5deg);
+}
+
+/* 添加装饰线条 */
+.section-divider {
+    display: none;
+}
+
+/* 添加图标装饰 */
+.icon-decoration {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: var(--accent-color);
+}
+
+/* 添加卡片内部装饰 */
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover::before {
+    opacity: 1;
+} 
