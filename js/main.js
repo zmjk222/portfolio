@@ -116,6 +116,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // 点击页面其他地方关闭菜单
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-container')) {
+            navLinks.classList.remove('active');
+        }
+    });
+
     // 添加平滑滚动
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {

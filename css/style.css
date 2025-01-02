@@ -551,208 +551,131 @@ body {
     transform: translateY(0);
 } 
 
-/* 移动端优化 - 保持与桌面端一致的布局 */
+/* 移动端优化 - 保持布局，缩小尺寸 */
 @media (max-width: 768px) {
-    /* 导航栏保持横向 */
-    .nav-container {
-        padding: 1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .nav-links {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        transform: none;
-        background: none;
-        padding: 0;
-        gap: 2rem;
-    }
-
-    /* 移除汉堡菜单 */
-    .menu-toggle {
-        display: none;
-    }
-
-    /* 保持原有布局和大小 */
+    /* 基础设置 */
     body {
-        font-size: 16px;
+        font-size: 12px;  /* 缩小基础字体 */
     }
 
     .container {
-        padding: 0 2rem;
-        max-width: 100%;
+        padding: 0 10px;
     }
 
-    /* 作品展示网格保持原有布局 */
+    /* 导航栏微调 */
+    .nav-container {
+        padding: 8px 10px;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    /* 关于我部分缩小 */
+    .about-content {
+        gap: 2rem;
+    }
+
+    .profile-image img {
+        width: 120px;  /* 缩小头像 */
+        height: 120px;
+    }
+
+    .profile-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* 作品展示部分 */
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .portfolio-category h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    /* 保持网格布局，缩小间距 */
     .portfolio-grid.four-columns {
         grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
+        gap: 0.8rem;
     }
 
     .portfolio-grid.three-columns {
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        gap: 0.8rem;
     }
 
-    /* 作品卡片样式保持一致 */
     .portfolio-item {
-        padding: 1.5rem;
+        padding: 0.8rem;
     }
 
     .portfolio-item h4 {
-        font-size: 1.25rem;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+    }
+
+    /* 详情面板缩小 */
+    .portfolio-detail {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .detail-grid {
+        grid-template-columns: repeat(3, 1fr);  /* 保持三列 */
+        gap: 0.8rem;
+    }
+
+    .detail-panel h3 {
+        font-size: 1.4rem;
         margin-bottom: 1rem;
     }
 
-    /* 详情面板样式保持一致 */
-    .portfolio-detail {
-        width: 60%;
-        padding: 2rem;
-    }
-
-    .detail-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-
     .detail-item h4 {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
     }
 
-    /* 关于我的部分保持横向布局 */
-    .about-content {
-        flex-direction: row;
-        gap: 4rem;
-        padding: 0;
-    }
-
-    .profile-image {
-        flex: 0 0 300px;
-    }
-
-    .profile-image img {
-        width: 300px;
-        height: 300px;
-    }
-
-    /* 标题样式保持一致 */
-    .section-title {
-        font-size: 3rem;
-        margin-bottom: 4rem;
-    }
-
-    .portfolio-category h3 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    /* 联系方式部分保持横向布局 */
+    /* 联系方式部分 */
     .contact-section {
-        padding: 5rem 0;
+        padding: 2rem 0;
     }
 
     .contact-content {
-        flex-direction: row;
-        gap: 4rem;
+        gap: 2rem;
+    }
+
+    .contact-info {
+        font-size: 0.9rem;
     }
 
     .qr-code img {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
     }
 }
 
-/* 超小屏幕也保持相同的布局 */
+/* 超小屏幕优化 */
 @media (max-width: 480px) {
-    .portfolio-grid.four-columns,
-    .portfolio-grid.three-columns,
-    .detail-grid {
-        grid-template-columns: repeat(2, 1fr);  /* 只在超小屏幕时改为两列 */
-        gap: 1rem;
+    .portfolio-grid.four-columns {
+        grid-template-columns: repeat(3, 1fr);  /* 改为三列 */
     }
 
-    /* 调整内边距 */
-    .container {
-        padding: 0 1rem;
+    .portfolio-grid.three-columns {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    /* 缩小字体和间距 */
-    .section-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
+    .portfolio-item {
+        padding: 0.5rem;
     }
-
-    .portfolio-category h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* 添加横向滚动支持 */
-@media (max-width: 768px) {
-    body {
-        overflow-x: auto;
-        min-width: 1200px;  /* 确保最小宽度与桌面端一致 */
-    }
-
-    .container {
-        width: 1200px;  /* 固定宽度，允许横向滚动 */
-        max-width: none;
-    }
-}
-
-/* 添加视觉元素 */
-/* 装饰背景 */
-.decorative-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-image: 
-        radial-gradient(circle at 10% 20%, rgba(0,113,227,0.05) 0%, transparent 50%),
-        radial-gradient(circle at 90% 80%, rgba(0,113,227,0.05) 0%, transparent 50%);
-    pointer-events: none;
-}
-
-/* 卡片悬浮效果增强 */
-.portfolio-item {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-10px) rotateX(5deg);
-}
-
-/* 添加装饰线条 */
-.section-divider {
-    display: none;
-}
-
-/* 添加图标装饰 */
-.icon-decoration {
-    font-size: 1.2rem;
-    margin-right: 0.5rem;
-    color: var(--accent-color);
-}
-
-/* 添加卡片内部装饰 */
-.portfolio-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-color), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.portfolio-item:hover::before {
-    opacity: 1;
 } 
