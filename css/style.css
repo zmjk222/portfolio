@@ -569,25 +569,31 @@ body {
         font-size: 12px;
     }
 
-    /* 关于我部分 */
+    /* 关于我部分改为上下布局 */
     .about-content {
         display: flex;
-        flex-direction: row;  /* 保持横向布局 */
-        gap: 20px;
+        flex-direction: column;  /* 改为纵向布局 */
+        align-items: center;     /* 居中对齐 */
+        gap: 15px;
         padding: 15px;
     }
 
     .profile-image {
-        flex: 0 0 100px;  /* 固定宽度 */
+        flex: none;
+        width: 120px;           /* 控制头像容器宽度 */
+        height: 120px;          /* 控制头像容器高度 */
+        margin-bottom: 10px;    /* 添加底部间距 */
     }
 
     .profile-image img {
-        width: 100px;
-        height: 100px;
+        width: 120px;           /* 头像宽度 */
+        height: 120px;          /* 头像高度 */
+        border-radius: 50%;     /* 保持圆形 */
     }
 
     .profile-text {
-        text-align: left;  /* 保持左对齐 */
+        text-align: center;     /* 文字居中 */
+        width: 100%;           /* 文字区域占满宽度 */
     }
 
     .profile-text h2 {
@@ -597,6 +603,18 @@ body {
 
     .profile-text p {
         font-size: 12px;
+        line-height: 1.4;
+        margin-bottom: 8px;    /* 段落间距 */
+    }
+
+    .skills-list {
+        text-align: left;      /* 技能列表左对齐 */
+        padding: 0 15px;       /* 添加左右内边距 */
+    }
+
+    .skill-item {
+        font-size: 12px;
+        margin-bottom: 8px;
         line-height: 1.4;
     }
 
@@ -677,6 +695,15 @@ body {
 
     .qr-code p {
         font-size: 12px;
+    }
+
+    /* 在移动端隐藏 logo */
+    .desktop-only {
+        display: none;
+    }
+
+    .nav-container {
+        justify-content: center;  /* 导航链接居中 */
     }
 }
 
