@@ -149,3 +149,63 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 添加触摸支持
 document.addEventListener('touchstart', function() {}, true); 
+
+// 添加图片预览功能
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.querySelector('.image-preview-modal');
+    const modalImg = document.querySelector('.preview-image');
+    const closeBtn = document.querySelector('.close-preview');
+    
+    // 为海报图片添加点击事件
+    document.querySelectorAll('.poster-item img').forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = 'flex';
+            modalImg.src = this.src;
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // 点击关闭按钮关闭预览
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    });
+
+    // 点击模态框背景关闭预览
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+
+    // ESC 键关闭预览
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+});
+*/ 
+
+// 文案展示的点击展开功能
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.article-title').forEach(title => {
+        title.addEventListener('click', function() {
+            // 获取当前文章的内容
+            const content = this.nextElementSibling;
+            
+            // 切换当前文章的显示状态
+            content.classList.toggle('active');
+            
+            // 关闭其他打开的文章
+            document.querySelectorAll('.article-content').forEach(otherContent => {
+                if (otherContent !== content) {
+                    otherContent.classList.remove('active');
+                }
+            });
+        });
+    });
+}); 

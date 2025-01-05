@@ -718,3 +718,680 @@ body {
         padding: 0.3rem;
     }
 } 
+
+/* 图片预览模态框样式 */
+.image-preview-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-preview-modal.active {
+    display: flex;
+}
+
+.preview-image {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.close-preview {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 添加图片点击效果 */
+.detail-item img {
+    cursor: zoom-in;
+} 
+
+/* PDF项目样式 */
+.pdf-item {
+    background: #f5f5f7;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pdf-item:hover {
+    transform: translateY(-5px);
+}
+
+.pdf-item img {
+    width: 60px !important;  /* PDF图标大小 */
+    height: 60px !important;
+    margin: 0 auto 15px;
+    aspect-ratio: auto !important;
+}
+
+.pdf-item h4 {
+    margin: 10px 0;
+    color: var(--primary-color);
+}
+
+.pdf-link {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.pdf-link:hover {
+    background: #005bbf;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .pdf-item {
+        padding: 15px;
+    }
+
+    .pdf-item img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .pdf-link {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+} 
+
+/* PDF列表样式 */
+.pdf-list {
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.pdf-link-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.pdf-link-item:last-child {
+    border-bottom: none;
+}
+
+.pdf-link-item a {
+    display: block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.pdf-link-item a:hover {
+    color: #005bbf;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .pdf-list {
+        padding: 10px;
+    }
+
+    .pdf-link-item {
+        padding: 10px;
+    }
+
+    .pdf-link-item a {
+        font-size: 14px;
+    }
+} 
+
+/* 知识树详情面板的链接样式 */
+.detail-panel[data-for="knowledge-tree"] .detail-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.detail-panel[data-for="knowledge-tree"] .detail-item a:hover {
+    transform: translateY(-5px);
+}
+
+/* 移除图片预览功能 */
+.detail-panel[data-for="knowledge-tree"] .detail-item img {
+    cursor: pointer;
+    cursor: default;  /* 移除放大镜光标 */
+} 
+
+/* 工作流详情面板样式 */
+.workflow-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 20px;
+}
+
+.workflow-item {
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;  /* 添加过渡效果 */
+}
+
+.workflow-item:hover {
+    transform: scale(1.02);  /* 悬停时放大 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);  /* 增强阴影效果 */
+}
+
+.workflow-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.workflow-item h4 {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+    background: #f5f5f7;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .workflow-grid {
+        gap: 1rem;
+        padding: 10px;
+    }
+
+    .workflow-item h4 {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+} 
+
+/* AI Agent 智能体详情面板样式 */
+.agent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    padding: 15px;
+    max-width: 900px;  /* 减小最大宽度 */
+    margin: 0 auto;
+}
+
+.agent-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.agent-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.agent-item a:hover {
+    transform: translateY(-5px);
+}
+
+.agent-item img {
+    width: 100%;
+    height: auto;  /* 自动高度，保持原始比例 */
+    display: block;
+    object-fit: contain;  /* 改为 contain，确保完整显示 */
+    max-height: 140px;  /* 限制最大高度 */
+    padding: 10px;  /* 添加内边距，让图片不贴边 */
+}
+
+.agent-item h4 {
+    padding: 0.8rem;
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: center;
+    background: #f5f5f7;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .agent-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        padding: 10px;
+    }
+
+    .agent-item img {
+        max-height: 100px;  /* 移动端更小的最大高度 */
+        padding: 8px;
+    }
+
+    .agent-item h4 {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+} 
+
+/* 公众号文章列表样式 */
+.article-list {
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.article-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.article-item:last-child {
+    border-bottom: none;
+}
+
+.article-item:hover {
+    background-color: #f5f5f7;
+}
+
+.article-item a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+    padding: 0 10px;
+}
+
+.article-item a:hover {
+    color: var(--accent-color);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .article-list {
+        padding: 10px;
+    }
+
+    .article-item {
+        padding: 12px;
+    }
+
+    .article-item a {
+        font-size: 14px;
+    }
+} 
+
+/* 图文海报展示样式 */
+.poster-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3列布局 */
+    gap: 2rem;  /* 间距 */
+    padding: 25px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.poster-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    aspect-ratio: 1/1.4;  /* 统一所有海报的宽高比 */
+    display: flex;
+    flex-direction: column;
+}
+
+.poster-item:hover {
+    transform: translateY(-5px);
+}
+
+.poster-item img {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: block;
+    object-fit: contain;
+    padding: 15px;
+    background: #fff;
+    cursor: default;  /* 移除手型光标 */
+}
+
+.poster-item h4 {
+    height: 50px;  /* 固定标题高度 */
+    padding: 0.8rem;
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+    background: #f5f5f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .poster-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 10px;
+    }
+
+    .poster-item h4 {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+} 
+
+/* 短视频展示样式 */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.video-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+}
+
+/* 横屏视频样式 */
+.video-item video {
+    width: 100%;
+    display: block;
+    background: #000;
+    aspect-ratio: 16/9;
+}
+
+/* 竖屏视频样式 */
+.video-item.vertical video {
+    aspect-ratio: 9/16;
+    max-width: 80%;  /* 限制宽度 */
+    margin: 0 auto;  /* 居中显示 */
+}
+
+.video-item h4 {
+    padding: 0.8rem;
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+    background: #f5f5f7;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 10px;
+    }
+
+    .video-item.vertical video {
+        max-width: 90%;
+    }
+
+    .video-item h4 {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+} 
+
+/* 文案展示样式 */
+.article-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.article-title {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    background: #f5f5f7;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.article-title:hover {
+    background: #e5e5e7;
+}
+
+.article-content {
+    padding: 1.5rem;
+    display: none;  /* 默认隐藏文章内容 */
+}
+
+.article-content.active {
+    display: block;  /* 点击后显示 */
+}
+
+.article-content h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.article-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--secondary-color);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .article-grid {
+        padding: 10px;
+    }
+
+    .article-title {
+        font-size: 1rem;
+    }
+
+    .article-content {
+        padding: 1rem;
+    }
+
+    .article-content h5 {
+        font-size: 1.1rem;
+    }
+} 
+
+/* 文案展示样式 */
+.article-showcase {
+    max-width: 900px;  /* 再减小一点容器宽度 */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.article-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.article-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    max-height: 300px;  /* 进一步减小图片最大高度 */
+    padding: 15px;
+}
+
+.article-item h4 {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;  /* 文字居中 */
+    background: #f5f5f7;
+    display: flex;  /* 使用 flex 布局确保文字垂直居中 */
+    align-items: center;
+    justify-content: center;  /* 水平居中 */
+    min-height: 50px;  /* 确保文字区域高度统一 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .article-showcase {
+        padding: 10px;
+    }
+
+    .article-item img {
+        max-height: 200px;  /* 移动端更小的图片高度 */
+        padding: 10px;
+    }
+
+    .article-item h4 {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+        min-height: 40px;  /* 移动端文字区域高度 */
+    }
+} 
+
+/* 横图样式 */
+.article-item.horizontal {
+    max-width: 100%;
+}
+
+/* 竖图两列布局 */
+.article-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.article-item.vertical img {
+    max-height: 600px;  /* 限制竖图高度 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .article-showcase {
+        padding: 10px;
+    }
+
+    .article-row {
+        grid-template-columns: 1fr;  /* 移动端改为单列 */
+        gap: 1rem;
+    }
+
+    .article-item h4 {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .article-item.vertical img {
+        max-height: 400px;  /* 移动端竖图高度 */
+    }
+} 
+
+/* 普通图片样式 */
+.article-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    max-height: 300px;
+    padding: 15px;
+}
+
+/* 活动2图片特殊样式 */
+.article-item img.larger-image {
+    max-height: 400px;  /* 比其他图片高一些 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .article-item img {
+        max-height: 200px;
+        padding: 10px;
+    }
+
+    .article-item img.larger-image {
+        max-height: 250px;  /* 移动端也相应放大 */
+    }
+} 
+
+/* 宣传物料图片特殊样式 */
+.detail-panel[data-for="materials"] .article-item img {
+    max-height: 450px;  /* 增加图片最大高度 */
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    padding: 20px;  /* 增加内边距 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .detail-panel[data-for="materials"] .article-item img {
+        max-height: 300px;  /* 移动端图片高度 */
+        padding: 15px;
+    }
+} 
+
+/* 文案文稿图片特殊样式 */
+.detail-panel[data-for="copywriting"] .article-item img {
+    max-height: 500px;  /* 增加图片最大高度 */
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    padding: 20px;  /* 增加内边距 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .detail-panel[data-for="copywriting"] .article-item img {
+        max-height: 350px;  /* 移动端图片高度 */
+        padding: 15px;
+    }
+} 
