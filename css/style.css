@@ -1108,12 +1108,36 @@ body {
 
 /* 短视频展示样式 */
 .video-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     padding: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
+}
+
+/* 视频行布局 */
+.video-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 默认三列布局 */
+    gap: 1.5rem;
+}
+
+/* 第一行横屏视频特殊布局 */
+.video-row.horizontal {
+    grid-template-columns: repeat(2, 1fr);  /* 两列布局 */
+    max-width: 1000px;  /* 限制最大宽度 */
+    margin: 0 auto;  /* 居中显示 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .video-row {
+        grid-template-columns: 1fr;  /* 单列布局 */
+        gap: 1rem;
+    }
+
+    .video-row.horizontal {
+        grid-template-columns: 1fr;  /* 单列布局 */
+    }
 }
 
 .video-item {
